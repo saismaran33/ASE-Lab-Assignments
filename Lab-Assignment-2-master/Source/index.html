@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script>
+            function validations()
+            { if(localStorage) {
+                form = document.forms["smaran1"];
+                var yname= form["uname"].value;
+                var name = localStorage.getItem("xname");
+                var x    = localStorage.getItem("pname");
+                var y    = form["password"].value;
+                if (yname == name && x==y) {
+                    return true;
+                } else{
+                    alert("check login details");
+                    return false;
+                }
+            }
+            }
+        </script>
+
+    </head>
+    <body background="traffic.jpg" >
+
+        <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+        <button onclick="document.getElementById('id01').style.display='block'" style="width:100px;position: absolute;left:1070px;top:50px">Login</button>
+        <button style="width: auto;position: absolute;left:1180px;top:50px"><a href="register.html" style="color: white;text-decoration: none">Register</a></button>
+
+        <div id="id01" class="modal">
+
+            <form class="modal-content animate" action="home.html" name="smaran1" onsubmit="return validations()">
+                <div class="imgcontainer">
+                    <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                    <img src="img_avatar3.png" alt="Avatar" class="avatar" style="width:100px;height:100px ">
+                </div>
+
+                <div class="container">
+                    <label><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button type="submit">Login</button>
+                    <input type="checkbox" checked="checked"> Remember me
+                </div>
+
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+
+                </div>
+            </form>
+        </div>
+
+
+        <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.2.1.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+        <script>
+            window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+            ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+    </body>
+</html>
